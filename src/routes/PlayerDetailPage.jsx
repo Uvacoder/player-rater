@@ -6,6 +6,7 @@ import {
 import PlayerRater from '../apis/PlayerRater';
 import AddReview from '../components/AddReview';
 import Reviews from '../components/Reviews';
+import StarRating from '../components/StarRating';
 import { PlayersContext } from '../context/PlayersContext';
 
 export default function PlayerDetailPage() {
@@ -26,7 +27,14 @@ export default function PlayerDetailPage() {
     return (
       <div className="update-page mt-4">
         <div className="card">
-          <h3 className="card-header">{selectedPlayer && selectedPlayer.player.name}</h3>
+          {selectedPlayer && (
+            <>
+            <h3 className="card-header">{selectedPlayer && selectedPlayer.player.name}<span className="ml-4" style={{ fontSize: "1.4rem" }}>
+              <StarRating rating={ selectedPlayer.player.average_rating } />
+            </span></h3>
+            {/* <img src={(matchPlayerImage(player)) } className="rounded float-right" alt="."></img> */}
+            </>
+            )}
           <div className="card-body">
             <h5 className="card-title">Player Overview</h5>
             <p className="card-text">Comment anything relative to this player or his team below.</p>

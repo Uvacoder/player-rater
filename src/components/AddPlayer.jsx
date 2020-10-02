@@ -8,7 +8,11 @@ const AddPlayer = () => {
     const [name, setName] = useState("")
     const [team, setTeam] = useState("")
     const [priceRange, setPriceRange] = useState(1)
-    const [country, setCountry] = useState("USA")
+    const [goals, setGoals] = useState(0)
+    const [assists, setAssists] = useState(0)
+    const [points, setPoints] = useState(0)
+    const [shots, setShots] = useState(0)
+    const [toi, setToi] = useState(0)
 
 
     const handleSubmit = async (e) => {
@@ -17,7 +21,11 @@ const AddPlayer = () => {
                 name,
                 team,
                 price_range: priceRange,
-                country
+                goals,
+                assists,
+                points,
+                shots,
+                toi
             })
             addPlayer(response.data.data.players)
             console.log(response.data.data)
@@ -46,7 +54,19 @@ const AddPlayer = () => {
                         </select>
                     </div>
                     <div className="col">
-                        <input value={country || ""} onChange={(e) => setCountry(e.target.value)} className="form-control form-control-sm" type="text" placeholder="country"></input>
+                        <input value={goals || ""} onChange={(e) => setGoals(e.target.value)} className="form-control form-control-sm" type="text" placeholder="goals"></input>
+                    </div>
+                    <div className="col">
+                        <input value={assists || ""} onChange={(e) => setAssists(e.target.value)} className="form-control form-control-sm" type="text" placeholder="assists"></input>
+                    </div>
+                    <div className="col">
+                        <input value={points || ""} onChange={(e) => setPoints(e.target.value)} className="form-control form-control-sm" type="text" placeholder="points"></input>
+                    </div>
+                    <div className="col">
+                        <input value={shots || ""} onChange={(e) => setShots(e.target.value)} className="form-control form-control-sm" type="text" placeholder="shots"></input>
+                    </div>
+                    <div className="col">
+                        <input value={toi || ""} onChange={(e) => setToi(e.target.value)} className="form-control form-control-sm" type="text" placeholder="time on ice"></input>
                     </div>
                     <button onClick={handleSubmit} type="submit" className="btn btn-primary btn-sm btn-style">Add Player</button>
                 </div>

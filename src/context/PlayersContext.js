@@ -12,7 +12,12 @@ export const PlayersContextProvider = (props) => {
 
     return (
         <PlayersContext.Provider 
-                value={{ setPlayers, addPlayer, players, selectedPlayer, setSelectedPlayer }}>
+                value={{
+                    setPlayers, 
+                    addPlayer, 
+                    players, 
+                    selectedPlayer, 
+                    setSelectedPlayer }}>
             {props.children}
         </PlayersContext.Provider>
     )

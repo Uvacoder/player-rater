@@ -7,7 +7,7 @@ const AddReview = () => {
     const history = useHistory()
     const location = useLocation()
     const [ name, setName ] = useState("")
-    const [ rating, setRating ] = useState(0)
+    const [ rating, setRating ] = useState(1)
     const [ reviewText, setReviewText ] = useState("")
 
     const handleSubmitReview = async (e) => {
@@ -35,7 +35,7 @@ const AddReview = () => {
                         <label htmlFor="rating">Rating</label>
                         <select value={rating} onChange={e => setRating(e.target.value)} id="rating" className="form-control form-control-sm">
                             <option disabled>Rating</option>
-                            <option value="1">1</option>
+                            <option value="1" disabled>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
