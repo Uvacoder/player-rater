@@ -14,9 +14,12 @@ import IMG13 from './img/ovechkin.svg'
 import IMG14 from './img/pk_subban.svg'
 import IMG15 from './img/Steven_Stamkos.svg'
 import IMG16 from './img/William_Nylander.svg'
+import IMG17 from './img/Artem_Anisimov.svg'
+import IMG18 from './img/Mitch_Marner.svg'
+import IMG19 from './img/Sean_Monahan.svg'
 
-export default function matchPlayerImage(player) {
-    switch (player) {
+export default function matchPlayerImage(name) {
+    switch (name) {
         case "Johnny Gaudreau":
             return IMG1;
         case "Auston Matthews":
@@ -49,5 +52,11 @@ export default function matchPlayerImage(player) {
             return IMG15
         case "William Nylander":
             return IMG16
+        case "Artem Anisimov":
+            return IMG17
+        case "Mitch Marner":
+            return IMG18
+        case "Sean Monahan":
+            return IMG19
         }
     }

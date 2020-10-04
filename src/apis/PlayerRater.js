@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: "http://localhost:4000/api/v1/players",
+    baseURL: "https://rotorink-player-rater-server.herokuapp.com/api/v1/players",
 })

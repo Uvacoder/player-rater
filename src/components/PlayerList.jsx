@@ -4,6 +4,7 @@ import PlayerRater from '../apis/PlayerRater'
 import StarRating from '../components/StarRating'
 import { PlayersContext } from '../context/PlayersContext'
 
+
 const PlayerList = (props) => {
     const { players, setPlayers } = useContext(PlayersContext)
     let history = useHistory()
@@ -75,7 +76,7 @@ const PlayerList = (props) => {
                     return (
                     <tr key={player.id} onClick={() => handlePlayerSelect(player.id)}>
                         <td>{player.name}</td>
-                        {/* <td><span><img src={matchTeamLogo(player)} className="rounded float-right" style={{maxWidth: '1rem'}} alt="."></img></span>{player.name}</td> */}
+                    {/* <td><span><img src={matchPlayerImage(player.name)} className="rounded float-right" style={{maxWidth: '1rem'}} alt="."></img></span>{player.name}</td> */}
                         <td>{player.team}</td>
                         <td>{"$".repeat(player.price_range)}</td>
                         <td>{renderRating(player)}</td>

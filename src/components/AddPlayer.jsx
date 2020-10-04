@@ -33,6 +33,7 @@ const AddPlayer = () => {
     }
 
     return (
+        <div>
         <div className="mt-2 mb-4">
             <form action="">
                 <div className="form-row">
@@ -68,9 +69,10 @@ const AddPlayer = () => {
                     <div className="col">
                         <input value={toi || ""} onChange={(e) => setToi(e.target.value)} className="form-control form-control-sm" type="text" placeholder="time on ice"></input>
                     </div>
-                    <button onClick={handleSubmit} type="submit" className="btn btn-primary btn-sm btn-style">Add Player</button>
+                    <button disabled onClick={handleSubmit} type="submit" className="btn btn-primary btn-sm btn-style">Add Player</button>
                 </div>
             </form>
+        </div>
         </div>
     )
 }
