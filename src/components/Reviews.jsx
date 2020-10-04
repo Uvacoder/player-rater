@@ -8,7 +8,7 @@ const Reviews = ({ reviews }) => {
             {reviews.map((review) => {
                 return (
            <div key={review.id} className="card bg-light mb-3 ml-2 mr-2">
-                <div className="card-header d-flex justify-content-between">
+                <div className="card-header d-flex flex-wrap justify-content-between">
                     <span>{review.name}</span>
                     <span><StarRating rating={review.rating} /></span>
                 </div>
