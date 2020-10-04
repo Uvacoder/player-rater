@@ -7,8 +7,8 @@ export default function Home() {
     return (
       <div className="home">
         <Header />
-        <AddPlayer />
         <PlayerList />
+        <AddPlayer />
       </div>
     );
   }

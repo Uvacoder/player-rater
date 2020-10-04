@@ -33,14 +33,14 @@ export default function PlayerDetailPage() {
             <h5 className="card-header">Player Overview</h5>
           <div className="card-body">
             <div className="d-flex align-items-center">
-            <img src={matchPlayerImage(selectedPlayer.player.name) } className="rounded float-right" alt="player profile image"></img>
+            <img src={matchPlayerImage(selectedPlayer.player.name) } style={{maxWidth: '12rem'}} className="rounded float-right" alt="player profile image"></img>
             <h3 className="card-title">{selectedPlayer && selectedPlayer.player.name}
               <span className="ml-4" style={{ fontSize: "1.4rem" }}><br></br>
                 <StarRating rating={ selectedPlayer.player.average_rating } />
               </span>
             </h3>
             </div>
-            <p className="card-text mt-4 ml-2">Comment anything relative to this player or his team below.</p>
+            <p className="card-text mt-4 ml-2">Comment anything relative to fantasy hockey as it pertains to this player or his team below.</p>
             <Link to="/" className="btn btn-primary ml-2">All Players</Link>
           </div>
           </>
